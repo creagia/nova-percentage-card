@@ -56,7 +56,7 @@ protected function cards()
 }
 
 ```
-### Full customized example
+### Full example
 ```php
 class SpentBudget extends \Creagia\NovaPercentageCard\NovaPercentageCard
 {
