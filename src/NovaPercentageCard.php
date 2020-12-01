@@ -76,11 +76,11 @@ abstract class NovaPercentageCard extends Card
     }
 
     /**
-     * Determine for how many minutes the metric should be cached.
+     * Determine for how many time the metric should be cached.
      *
-     * @return  int
+     * @return  \DateTimeInterface|\DateInterval|float|int
      */
-    public function cacheFor(): int
+    public function cacheFor()
     {
         return 0;
     }

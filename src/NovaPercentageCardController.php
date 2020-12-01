@@ -22,19 +22,13 @@ class NovaPercentageCardController extends Controller
         $request->validate([
             'cardClass' => [
                 'required', 'string',
-            ],
-            'cacheKey' => [
-                'required', 'string',
-            ],
-            'ttl' => [
-                'required', 'int'
             ]
         ]);
 
         $cardClass = $request->cardClass;
+        $card = new $cardClass;
 
-        $result = Cache::remember($request->cacheKey, ($request->ttl * 60), function () use ($cardClass) {
-            $card = new $cardClass;
+        $result = Cache::remember($card->cacheKey(), $card->cacheFor(), function () use ($card) {
             $count = $card->getCount();
             $total = $card->getTotal();
             $percentage = ($total > 0) ? (100 * $count / $total) : 0;

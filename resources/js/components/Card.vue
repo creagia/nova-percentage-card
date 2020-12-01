@@ -71,9 +71,7 @@ export default {
         payload() {
             return {
                 params: {
-                    cardClass: this.card.cardClass,
-                    cacheKey: this.card.cacheKey,
-                    ttl: this.card.ttl,
+                    cardClass: this.card.cardClass
                 }
             };
         },

@@ -93,7 +93,7 @@ class SpentBudget extends \Creagia\NovaPercentageCard\NovaPercentageCard
      *
      * @return float
      */
-     function getCount(): float
+    function getCount(): float
     {
         return Order::sum('total');
     }
@@ -109,13 +109,13 @@ class SpentBudget extends \Creagia\NovaPercentageCard\NovaPercentageCard
     }
     
     /**
-     * Determine for how many minutes the metric should be cached.
+     * Determine for how many time the metric should be cached.
      *
-     * @return  int
+     * @return  \DateTimeInterface|\DateInterval|float|int
      */
     public function cacheFor(): int
     {
-        return 0;
+        return now()->addMinutes(5);
     }
 
     /**
