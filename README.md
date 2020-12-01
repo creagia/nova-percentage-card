@@ -9,8 +9,8 @@ composer require creagia/nova-percentage-card
 ```
 
 ## Usage:
-- Create a Class extending \Creagia\NovaPercentageCard\NovaPercentageCard
-- Add a new Object to the cards() method
+- Create a Class extending `\Creagia\NovaPercentageCard\NovaPercentageCard`
+- Add a new Object to the `cards()` method
 
 ### Basic example
 ```php
@@ -129,3 +129,7 @@ class SpentBudget extends \Creagia\NovaPercentageCard\NovaPercentageCard
     }
 }
 ```
+
+## License
+
+This project is licensed under the MIT License - see the [MIT license](LICENSE.md) file for details
