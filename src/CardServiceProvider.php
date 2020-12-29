@@ -20,8 +20,13 @@ class CardServiceProvider extends ServiceProvider
             $this->routes();
         });
 
+        $this->publishes([
+            __DIR__ . '/../resources/lang' => resource_path('lang/vendor/nova-percentage-card'),
+        ]);
+
         Nova::serving(function (ServingNova $event) {
-            Nova::script('nova-percentage-card', __DIR__.'/../dist/js/card.js');
+            Nova::script('nova-percentage-card', __DIR__ . '/../dist/js/card.js');
+            Nova::translations(resource_path('lang/vendor/nova-percentage-card/' . app()->getLocale() . '.json'));
         });
     }
 

@@ -8,6 +8,12 @@ A Laravel Nova card to display percentages
 composer require creagia/nova-percentage-card
 ```
 
+## Localization
+Publish the package language files to your application's `resources/lang/vendor` directory:
+```
+php artisan vendor:publish --provider="Creagia\NovaPercentageCard\CardServiceProvider"
+```
+
 ## Usage:
 - Create a Class extending `\Creagia\NovaPercentageCard\NovaPercentageCard`
 - Add a new Object to the `cards()` method

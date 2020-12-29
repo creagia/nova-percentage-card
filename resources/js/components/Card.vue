@@ -11,12 +11,12 @@
             <div class="flex items-center" v-if="errors === null">
                 <p class="text-80 font-bold" v-show="percentage!==null">
                     <span v-if="count!==null">{{ count.toLocaleString() }}</span>
-                    of
+                    {{ __('of') }}
                     <span v-if="total!==null">{{ total.toLocaleString() }}</span>
                     {{ card.label }}
                 </p>
                 <p class="text-80 font-bold mt-4" v-show="percentage===null">
-                    No data
+                    {{ __('No data') }}
                 </p>
             </div>
             <ul v-if="errors !== null" class="error">
