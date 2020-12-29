@@ -3,7 +3,12 @@ A Laravel Nova card to display percentages
 
 ![alt text](screenshot.png)
 
-## Installation:
+## Requirements
+
+- `php: >=7.1`
+- `laravel/nova: ^2.0|^3.0`
+
+## Installation
 ```bash
 composer require creagia/nova-percentage-card
 ```
