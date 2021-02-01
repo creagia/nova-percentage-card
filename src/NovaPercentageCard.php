@@ -8,6 +8,8 @@ use Laravel\Nova\Nova;
 
 abstract class NovaPercentageCard extends Card
 {
+    private $resourceId;
+
     /**
      * The displayable name of the metric.
      *
@@ -35,6 +37,26 @@ abstract class NovaPercentageCard extends Card
      * @var string
      */
     public $width = '1/3';
+
+    /**
+     * Set the resource Id
+     *
+     * @param $resourceId
+     */
+    public function setResourceId($resourceId): void
+    {
+        $this->resourceId = $resourceId;
+    }
+
+    /**
+     * Get the resource Id
+     *
+     * @return mixed
+     */
+    public function getResourceId()
+    {
+        return $this->resourceId;
+    }
 
     /**
      * Get the total of filtered records
@@ -104,6 +126,7 @@ abstract class NovaPercentageCard extends Card
     {
         return array_merge(parent::jsonSerialize(), [
             'cardClass' => static::class,
+            'resourceId' => $this->resourceId,
             'cacheKey' => $this->cacheKey(),
             'name' => $this->name(),
             'label' => $this->label,

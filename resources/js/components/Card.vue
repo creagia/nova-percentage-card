@@ -71,7 +71,8 @@ export default {
         payload() {
             return {
                 params: {
-                    cardClass: this.card.cardClass
+                    cardClass: this.card.cardClass,
+                    resourceId: this.card.resourceId
                 }
             };
         },

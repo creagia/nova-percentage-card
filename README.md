@@ -141,6 +141,35 @@ class SpentBudget extends \Creagia\NovaPercentageCard\NovaPercentageCard
 }
 ```
 
+### Resource Detail example
+```php
+
+class OrderTotalPaid extends \Creagia\NovaPercentageCard\NovaPercentageCard
+{
+    function getCount(): float
+    {
+        return \App\Models\Order::find($this->getResourceId())->total_paid;
+    }
+
+    function getTotal(): float
+    {
+        return \App\Models\Order::find($this->getResourceId())->total;
+    }
+}
+
+...
+
+public function cards(Request $request)
+{
+    $percentageCard = new OrderTotalPaid();
+    $percentageCard->setResourceId($request->resourceId ?? null);
+    return [
+        $percentageCard->onlyOnDetail(),
+    ];
+}
+
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [MIT license](LICENSE.md) file for details

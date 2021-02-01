@@ -27,6 +27,7 @@ class NovaPercentageCardController extends Controller
 
         $cardClass = $request->cardClass;
         $card = new $cardClass;
+        $card->setResourceId($request->resourceId ?? null);
 
         $result = Cache::remember($card->cacheKey(), $card->cacheFor(), function () use ($card) {
             $count = $card->getCount();
