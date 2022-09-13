@@ -4,9 +4,7 @@ A Laravel Nova card to display percentages
 ![alt text](screenshot.png)
 
 ## Support us
-[<img width="570" alt="Laradir banner" src="https://user-images.githubusercontent.com/240932/189903723-2c015907-b8c9-4ff7-b6e6-2c8cf10aea16.png">](https://laradir.com/?utm_campaign=github&utm_source=banner)
-
-
+[<img width="570" alt="Laradir banner" src="https://user-images.githubusercontent.com/240932/189903723-2c015907-b8c9-4ff7-b6e6-2c8cf10aea16.png">](https://laradir.com/?utm_campaign=github&utm_medium=banner&utm_term=nova-percentage-card)
 
 ## Requirements
 
